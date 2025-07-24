@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleBrowserApp", "PeopleBrowserApp\PeopleBrowserApp.csproj", "{CDB371F9-312C-6134-ECEB-A64D0DBB1496}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PeopleBrowserApp.Tests", "PeopleBrowserApp.Tests\PeopleBrowserApp.Tests.csproj", "{EA51E810-4049-5970-A382-C68BD11B37EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CDB371F9-312C-6134-ECEB-A64D0DBB1496}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDB371F9-312C-6134-ECEB-A64D0DBB1496}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDB371F9-312C-6134-ECEB-A64D0DBB1496}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDB371F9-312C-6134-ECEB-A64D0DBB1496}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA51E810-4049-5970-A382-C68BD11B37EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA51E810-4049-5970-A382-C68BD11B37EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA51E810-4049-5970-A382-C68BD11B37EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA51E810-4049-5970-A382-C68BD11B37EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA78FC6B-031D-4AC9-878B-DA884731DAE4}
+	EndGlobalSection
+EndGlobal
