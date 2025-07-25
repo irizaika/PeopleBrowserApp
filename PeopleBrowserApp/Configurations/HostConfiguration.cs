@@ -1,8 +1,12 @@
 ﻿using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using PeopleBrowserApp.Repositories;
+using PeopleBrowserApp.Interfaces;
+using PeopleBrowserApp.Resources;
+using PeopleBrowserApp.Services;
 
-namespace PeopleBrowserApp
+namespace PeopleBrowserApp.Configurations
 {
     internal static class HostConfiguration
     {
@@ -27,8 +31,11 @@ namespace PeopleBrowserApp
 
                     services.AddSingleton(appSettings);
                     services.AddSingleton<IPeopleRepository, PeopleRepository>();
-                    services.AddSingleton<PeopleService>();
-                    services.AddSingleton<Menu>();
+                    services.AddSingleton<IConsole, SystemConsole>();
+                    services.AddSingleton<IConsoleCancelHandler, ConsoleCancelHandler>();
+                    services.AddSingleton<IPeopleService, PeopleService>();
+                    services.AddSingleton<IDisplayService, DisplayService>();
+                    services.AddSingleton<MenuHandler>();
                 });
     }
 

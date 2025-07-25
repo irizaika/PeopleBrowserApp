@@ -1,6 +1,6 @@
 ﻿using Trippin;
 
-namespace PeopleBrowserApp
+namespace PeopleBrowserApp.Interfaces
 {
     public interface IPeopleRepository
     {

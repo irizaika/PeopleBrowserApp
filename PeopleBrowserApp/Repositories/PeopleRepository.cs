@@ -1,7 +1,9 @@
 ﻿using Microsoft.OData.Client;
+using PeopleBrowserApp.Configurations;
+using PeopleBrowserApp.Interfaces;
 using Trippin;
 
-namespace PeopleBrowserApp
+namespace PeopleBrowserApp.Repositories
 {
     public class PeopleRepository : IPeopleRepository
     {
@@ -17,7 +19,7 @@ namespace PeopleBrowserApp
         public async Task<IEnumerable<Person>> GetPeopleAsync(CancellationToken cancellationToken = default)
         {
             var people = await _context.People.ExecuteAsync(cancellationToken);
-            return people.ToList();
+            return people;
         }
 
         public async Task<IEnumerable<Person>> SearchPeopleAsync(string firstName, CancellationToken cancellationToken = default)
@@ -25,7 +27,7 @@ namespace PeopleBrowserApp
             string filter = $"contains(tolower(FirstName), '{firstName.ToLower()}')";
             var query = _context.People.AddQueryOption("$filter", filter);
             var people = await query.ExecuteAsync(cancellationToken);
-            return people.ToList();
+            return people;
         }
 
         public async Task<Person?> GetPersonAsync(string username, CancellationToken cancellationToken = default)

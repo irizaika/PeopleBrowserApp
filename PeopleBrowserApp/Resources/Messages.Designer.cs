@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PeopleBrowserApp {
+namespace PeopleBrowserApp.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace PeopleBrowserApp {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PeopleBrowserApp.Messages", typeof(Messages).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PeopleBrowserApp.Resources.Messages", typeof(Messages).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -84,6 +84,15 @@ namespace PeopleBrowserApp {
         internal static string ListIsEmpty {
             get {
                 return ResourceManager.GetString("ListIsEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No input provided. Exiting..
+        /// </summary>
+        internal static string NoInput {
+            get {
+                return ResourceManager.GetString("NoInput", resourceCulture);
             }
         }
         

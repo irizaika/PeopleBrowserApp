@@ -126,6 +126,9 @@
   <data name="ListIsEmpty" xml:space="preserve">
     <value>No data found.</value>
   </data>
+  <data name="NoInput" xml:space="preserve">
+    <value>No input provided. Exiting.</value>
+  </data>
   <data name="NoResultsFound" xml:space="preserve">
     <value>No results found. Try adjusting your search criteria.</value>
   </data>
