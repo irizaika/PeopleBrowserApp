@@ -1,7 +1,6 @@
 ﻿using PeopleBrowserApp.Interfaces;
 using PeopleBrowserApp.Models;
 using PeopleBrowserApp.Resources;
-using Trippin;
 
 namespace PeopleBrowserApp.Services
 {
@@ -14,15 +13,14 @@ namespace PeopleBrowserApp.Services
             _console = console;
         }
 
-        public void DisplayMenuOptions()
+        public void DisplayMenuOptions(IEnumerable<MenuItem> menuItems)
         {
-            _console.WriteLine("1. List all people");
-            _console.WriteLine("2. Search people");
-            _console.WriteLine("3. View person details");
-            _console.WriteLine("4. Exit\n");
+            foreach (var item in menuItems.OrderBy(i => i.Key))
+            {
+                _console.WriteLine($"{item.Key}. {item.Description}");
+            }
             _console.Write("Choose an option: ");
         }
-
 
         public void DisplayPeople(IReadOnlyList<PersonDto> people, string emptyMessage)
         {
@@ -40,7 +38,6 @@ namespace PeopleBrowserApp.Services
             }
             _console.WriteLine("\n");
         }
-
         public void DisplayPerson(PersonDto? person, string username)
         {
             if (person != null)
@@ -72,6 +69,17 @@ namespace PeopleBrowserApp.Services
 
             _console.WriteLine("\n");
         }
-    }
 
+        public string? ReadRequiredInput(string prompt)
+        {
+            _console.Write(prompt);
+            var input = _console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                _console.WriteLine(Messages.EmptyValueTryAgain + Environment.NewLine);
+                return null;
+            }
+            return input;
+        }
+    }
 }

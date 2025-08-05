@@ -1,8 +1,8 @@
-﻿using Microsoft.Extensions.Hosting;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Configuration;
-using PeopleBrowserApp.Repositories;
+using Microsoft.Extensions.Hosting;
 using PeopleBrowserApp.Interfaces;
+using PeopleBrowserApp.Repositories;
 using PeopleBrowserApp.Resources;
 using PeopleBrowserApp.Services;
 
@@ -36,6 +36,8 @@ namespace PeopleBrowserApp.Configurations
                     services.AddSingleton<IPeopleService, PeopleService>();
                     services.AddSingleton<IDisplayService, DisplayService>();
                     services.AddSingleton<MenuHandler>();
+                    services.AddSingleton<MenuActionsService>();
+                    services.AddSingleton<IExitHandler, ExitHandler>();
                 });
     }
 
